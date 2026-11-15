@@ -80,6 +80,20 @@ const cartTotal = document.getElementById("cartTotal");
 let cartList = [];
 let cartNoticeTimer = null;
 
+function isPageReload() {
+  const navType = performance.getEntriesByType("navigation")[0];
+  if (navType) return navType.type === "reload";
+  return performance.navigation && performance.navigation.type === 1;
+}
+
+function clearSavedCart() {
+  cartList = [];
+  try {
+    localStorage.removeItem("walmartCartList");
+    localStorage.removeItem("walmartCart");
+  } catch (error) {}
+}
+
 function loadCart() {
   try {
     cartList = JSON.parse(localStorage.getItem("walmartCartList")) || [];
@@ -207,10 +221,16 @@ function addToCart(button) {
   }, 2500);
 }
 
-loadCart();
+if (isPageReload()) {
+  clearSavedCart();
+} else {
+  loadCart();
+}
+
 saveCart();
 renderCartPanel();
 cartNotice?.classList.remove("show");
+closeCartPanel();
 
 document.addEventListener("click", (event) => {
   const addBtn = event.target.closest(".add-cart");
