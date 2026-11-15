@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="offer-bar" id="offerBar">
+    Create an account and enjoy <strong>20% off</strong> your first order
+    <button class="offer-close" id="offerClose" aria-label="Close offer">&times;</button>
+  </div>
+
+  <div class="side-navbar" id="sideNavbar">
+    <button type="button" class="side-navbar-close" id="sideNavbarClose" aria-label="Close menu">&times;</button>
+    <div class="side-navbar-links">
+      <p class="side-navbar-link"><a href="index.html">Home</a></p>
+      <p class="side-navbar-link"><a href="index.html#new-arrival">New Arrival</a></p>
+      <p class="side-navbar-link"><a href="index.html#most-wanted">Most Wanted</a></p>
+      <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+      <p class="side-navbar-link"><a href="contact.html">Contact Us</a></p>
+    </div>
+  </div>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <nav class="navbar">
+    <h1>Walmart<span>.</span></h1>
+    <div class="navbar-links">
+      <p><a href="index.html">Home</a></p>
+      <p><a href="index.html#new-arrival">New Arrival</a></p>
+      <p><a href="index.html#most-wanted">Most Wanted</a></p>
+      <p><a href="collections.html">Collections</a></p>
+      <p><a href="contact.html">Contact Us</a></p>
+    </div>
+    <div class="navbar-right">
+      <div class="cart-box">
+        <p class="cart-notice" id="cartNotice">Added to cart</p>
+        <button type="button" class="cart-btn" id="cartBtn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <div class="cart-panel" id="cartPanel">
+          <div class="cart-panel-head">
+            <h3>Your cart</h3>
+            <button type="button" class="cart-panel-close" id="cartPanelClose" aria-label="Close cart">&times;</button>
+          </div>
+          <div class="cart-panel-list" id="cartList"></div>
+          <p class="cart-panel-empty" id="cartEmpty">Your cart is empty.</p>
+          <p class="cart-panel-total" id="cartTotal"></p>
+          <button type="button" class="cart-clear" id="cartClear">Clear cart</button>
+        </div>
+      </div>
+      <button type="button" class="navbar-menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="divide-section">
+
+    <!-- Left side: filters -->
+    <aside class="filter-section">
+      <div class="filters-top">
+        <h2>Filters</h2>
+        <button type="button" class="clear-filters" id="clearFilters">Clear</button>
+      </div>
+
+      <div class="filter-group">
+        <h3>Occasion</h3>
+        <label><input type="checkbox" name="occasion" value="summer"> Summer</label>
+        <label><input type="checkbox" name="occasion" value="party"> Party</label>
+        <label><input type="checkbox" name="occasion" value="beach"> Beach</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Colors</h3>
+        <label><input type="checkbox" name="color" value="red"> Red</label>
+        <label><input type="checkbox" name="color" value="blue"> Blue</label>
+        <label><input type="checkbox" name="color" value="white"> White</label>
+        <label><input type="checkbox" name="color" value="green"> Green</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Arrivals</h3>
+        <label><input type="checkbox" name="arrival" value="new"> New</label>
+        <label><input type="checkbox" name="arrival" value="old"> Old</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Price</h3>
+        <label><input type="checkbox" name="price" value="under300"> Under ₹300</label>
+        <label><input type="checkbox" name="price" value="300to500"> ₹300 – ₹500</label>
+        <label><input type="checkbox" name="price" value="above500"> Above ₹500</label>
+      </div>
+    </aside>
+
+    <!-- Right side: search + products -->
+    <div class="product-section">
+      <div class="navbar-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="searchInput" placeholder="search">
+      </div>
+      <p class="result-count" id="resultCount"></p>
+
+      <div class="products" id="products"></div>
+      <p class="empty-products" id="noProducts">No products match this filter. Try another option or clear filters.</p>
+    </div>
+
+  </section>
+
+  <section class="news">
+    <h2>Stay in the loop</h2>
+    <p>Get sale alerts, new arrivals, and member offers in your inbox</p>
+    <form id="newsForm" novalidate>
+      <div class="form-group">
+        <input type="email" id="newsEmail" placeholder="Enter your email">
+        <p class="error" id="newsEmailError"></p>
+      </div>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-box">
+        <a class="footer-logo" href="index.html">Walmart<span>.</span></a>
+        <p>Everyday fashion at fair prices. Made for real life, not just for photos.</p>
+        <h4>Follow us</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-box footer-visit">
+        <h4>Visit</h4>
+        <p>12, Anna Nagar, Chennai</p>
+        <p>Mon–Sat · 10am–8pm</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 Walmart.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

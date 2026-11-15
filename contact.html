@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="offer-bar" id="offerBar">
+    Create an account and enjoy <strong>20% off</strong> your first order
+    <button class="offer-close" id="offerClose" aria-label="Close offer">&times;</button>
+  </div>
+
+  <div class="side-navbar" id="sideNavbar">
+    <button type="button" class="side-navbar-close" id="sideNavbarClose" aria-label="Close menu">&times;</button>
+    <div class="side-navbar-links">
+      <p class="side-navbar-link"><a href="index.html">Home</a></p>
+      <p class="side-navbar-link"><a href="index.html#new-arrival">New Arrival</a></p>
+      <p class="side-navbar-link"><a href="index.html#most-wanted">Most Wanted</a></p>
+      <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+      <p class="side-navbar-link"><a href="contact.html">Contact Us</a></p>
+    </div>
+  </div>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <nav class="navbar">
+    <h1>Walmart<span>.</span></h1>
+    <div class="navbar-links">
+      <p><a href="index.html">Home</a></p>
+      <p><a href="index.html#new-arrival">New Arrival</a></p>
+      <p><a href="index.html#most-wanted">Most Wanted</a></p>
+      <p><a href="collections.html">Collections</a></p>
+      <p><a href="contact.html">Contact Us</a></p>
+    </div>
+    <div class="navbar-right">
+      <div class="cart-box">
+        <p class="cart-notice" id="cartNotice">Added to cart</p>
+        <button type="button" class="cart-btn" id="cartBtn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <div class="cart-panel" id="cartPanel">
+          <div class="cart-panel-head">
+            <h3>Your cart</h3>
+            <button type="button" class="cart-panel-close" id="cartPanelClose" aria-label="Close cart">&times;</button>
+          </div>
+          <div class="cart-panel-list" id="cartList"></div>
+          <p class="cart-panel-empty" id="cartEmpty">Your cart is empty.</p>
+          <p class="cart-panel-total" id="cartTotal"></p>
+          <button type="button" class="cart-clear" id="cartClear">Clear cart</button>
+        </div>
+      </div>
+      <button type="button" class="navbar-menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="contact-page">
+    <div class="contact-intro">
+      <p class="contact-kicker">Need a hand?</p>
+      <h1>Get in touch</h1>
+      <p>Ask about sizes, orders, or store hours. We reply within one working day.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Visit the store</h3>
+          <p>12, Anna Nagar, Chennai</p>
+        </div>
+        <div class="contact-card">
+          <i class="fa-regular fa-clock"></i>
+          <h3>Opening hours</h3>
+          <p>Mon–Sat · 10am–8pm</p>
+        </div>
+        <div class="contact-card">
+          <i class="fa-regular fa-envelope"></i>
+          <h3>Email</h3>
+          <p>hello@walmart.com</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate autocomplete="off">
+        <h2>Send a message</h2>
+        <p class="subtitle">All fields are required.</p>
+
+        <div class="form-group">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" placeholder="Enter your name">
+          <p class="error" id="nameError"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" placeholder="Enter your email">
+          <p class="error" id="emailError"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" placeholder="How can we help?"></textarea>
+          <p class="error" id="messageError"></p>
+        </div>
+
+        <button type="submit">Send message</button>
+        <p id="contactMessageText"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="news">
+    <h2>Stay in the loop</h2>
+    <p>Get sale alerts, new arrivals, and member offers in your inbox</p>
+    <form id="newsForm" novalidate>
+      <div class="form-group">
+        <input type="email" id="newsEmail" placeholder="Enter your email">
+        <p class="error" id="newsEmailError"></p>
+      </div>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-box">
+        <a class="footer-logo" href="index.html">Walmart<span>.</span></a>
+        <p>Everyday fashion at fair prices. Made for real life, not just for photos.</p>
+        <h4>Follow us</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-box footer-visit">
+        <h4>Visit</h4>
+        <p>12, Anna Nagar, Chennai</p>
+        <p>Mon–Sat · 10am–8pm</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 Walmart.com</p>
+  </footer>
+
+  <div class="popup-overlay" id="successPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-box">
+      <button type="button" class="popup-close" id="closePopup" aria-label="Close">&times;</button>
+      <div class="popup-icon">&#10003;</div>
+      <h2 id="popupTitle">Message sent</h2>
+      <p id="popupText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

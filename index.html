@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walmart | Online Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Offer bar at the top (can be closed with X) -->
+  <div class="offer-bar" id="offerBar">
+    Create an account and enjoy <strong>20% off</strong> your first order
+    <button class="offer-close" id="offerClose" aria-label="Close offer">&times;</button>
+  </div>
+
+  <!-- Side menu for mobile -->
+  <div class="side-navbar" id="sideNavbar">
+    <button type="button" class="side-navbar-close" id="sideNavbarClose" aria-label="Close menu">&times;</button>
+    <div class="side-navbar-links">
+      <p class="side-navbar-link"><a href="index.html">Home</a></p>
+      <p class="side-navbar-link"><a href="index.html#new-arrival">New Arrival</a></p>
+      <p class="side-navbar-link"><a href="index.html#most-wanted">Most Wanted</a></p>
+      <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+      <p class="side-navbar-link"><a href="contact.html">Contact Us</a></p>
+    </div>
+  </div>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <!-- Main navigation -->
+  <nav class="navbar">
+    <h1>Walmart<span>.</span></h1>
+    <div class="navbar-links">
+      <p><a href="index.html">Home</a></p>
+      <p><a href="index.html#new-arrival">New Arrival</a></p>
+      <p><a href="index.html#most-wanted">Most Wanted</a></p>
+      <p><a href="collections.html">Collections</a></p>
+      <p><a href="contact.html">Contact Us</a></p>
+    </div>
+    <div class="navbar-right">
+      <div class="cart-box">
+        <p class="cart-notice" id="cartNotice">Added to cart</p>
+        <button type="button" class="cart-btn" id="cartBtn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <div class="cart-panel" id="cartPanel">
+          <div class="cart-panel-head">
+            <h3>Your cart</h3>
+            <button type="button" class="cart-panel-close" id="cartPanelClose" aria-label="Close cart">&times;</button>
+          </div>
+          <div class="cart-panel-list" id="cartList"></div>
+          <p class="cart-panel-empty" id="cartEmpty">Your cart is empty.</p>
+          <p class="cart-panel-total" id="cartTotal"></p>
+          <button type="button" class="cart-clear" id="cartClear">Clear cart</button>
+        </div>
+      </div>
+      <button type="button" class="navbar-menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Image slider -->
+  <div class="slider">
+    <div class="slider-left-button" id="sliderLeft">
+      <i class="fa-solid fa-angle-left"></i>
+    </div>
+
+    <div class="slider-image-container" id="sliderImages">
+      <div class="slider-image">
+        <img src="img/others/slider-one.jpg" alt="Summer collection">
+      </div>
+      <div class="slider-image">
+        <img src="img/others/slider-two.jpg" alt="New styles">
+      </div>
+      <div class="slider-image">
+        <img src="img/others/slider-three.jpg" alt="Fashion look">
+      </div>
+    </div>
+
+    <div class="slider-content">
+      <h1>Refresh your wardrobe with our</h1>
+      <h4>Latest Summer Edit</h4>
+      <a href="collections.html"><button>Explore Now <i class="fa-solid fa-arrow-right"></i></button></a>
+    </div>
+
+    <div class="slider-right-button" id="sliderRight">
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+  </div>
+
+  <!-- Brand logos -->
+  <section class="container">
+    <h2>Brands</h2>
+    <div class="brands">
+      <div class="brands-item">
+        <img class="brands-icon" src="img/icons/puma.png" alt="Puma">
+        <p>Puma</p>
+      </div>
+      <div class="brands-item">
+        <img class="brands-icon" src="img/icons/adidas.png" alt="Adidas">
+        <p>Adidas</p>
+      </div>
+      <div class="brands-item">
+        <img class="brands-icon" src="img/icons/simple.png" alt="Simple">
+        <p>Simple</p>
+      </div>
+      <div class="brands-item">
+        <img class="brands-icon" src="img/icons/leaves.png" alt="Leaves">
+        <p>Leaves</p>
+      </div>
+      <div class="brands-item">
+        <img class="brands-icon" src="img/icons/behance.png" alt="Behance">
+        <p>Behance</p>
+      </div>
+      <div class="brands-item">
+        <img class="brands-icon" src="img/icons/twitch.png" alt="Twitch">
+        <p>Twitch</p>
+      </div>
+      <div class="brands-item">
+        <img class="brands-icon" src="img/icons/nike.png" alt="Nike">
+        <p>Nike</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer experience -->
+  <section class="container">
+    <div class="services-top">
+      <div>
+        <h2>We Provide Best</h2>
+        <h2>Customer Experiences</h2>
+      </div>
+      <p>|| We ensure that our customer have the best shopping experience</p>
+    </div>
+
+    <div class="services-cards">
+      <div>
+        <i class="fa-regular fa-circle-check"></i>
+        <h4>Original Products</h4>
+        <p>Every piece is sourced from trusted brands, so you shop authentic styles with confidence.</p>
+      </div>
+      <div>
+        <i class="fa-regular fa-face-smile"></i>
+        <h4>Satisfaction Guarantee</h4>
+        <p>Not happy with your order? Return it easily and we will make it right.</p>
+      </div>
+      <div>
+        <i class="fa-regular fa-clock"></i>
+        <h4>New Arrival Everyday</h4>
+        <p>Fresh looks drop daily, so you can always find something new to wear.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-truck-fast"></i>
+        <h4>Fast & Free Shipping</h4>
+        <p>Orders ship quickly at no extra cost, and you can track them until they arrive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section class="container" id="new-arrival">
+    <h1>New Arrivals</h1>
+    <div class="new-arrival">
+      <div class="new-arrival-box">
+        <img src="img/products/n1.jpg" alt="Sky camp shirt">
+        <div class="overlay"></div>
+        <button type="button" class="add-cart" data-name="Sky Camp Shirt" data-price="249">Add to cart</button>
+      </div>
+      <div class="new-arrival-box">
+        <img src="img/products/n2.jpg" alt="Harbor knit tee">
+        <div class="overlay"></div>
+        <button type="button" class="add-cart" data-name="Harbor Knit" data-price="289">Add to cart</button>
+      </div>
+      <div class="new-arrival-box">
+        <img src="img/products/n3.jpg" alt="Midnight print shirt">
+        <div class="overlay"></div>
+        <button type="button" class="add-cart" data-name="Midnight Shirt" data-price="320">Add to cart</button>
+      </div>
+      <div class="new-arrival-box">
+        <img src="img/products/n4.jpg" alt="Ivory stacked tees">
+        <div class="overlay"></div>
+        <button type="button" class="add-cart" data-name="Ivory Resort Shirt" data-price="365">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Most Wanted -->
+  <section class="container" id="most-wanted">
+    <h1>Most Wanted</h1>
+    <div class="most-wanted">
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/n5.jpg" alt="Most wanted 1">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Cedar Work Shirt" data-price="399">Add to cart</button>
+      </div>
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/n6.jpg" alt="Most wanted 2">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Olive Weekend Shirt" data-price="420">Add to cart</button>
+      </div>
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/n7.jpg" alt="Most wanted 3">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Ink Stripe Shirt" data-price="450">Add to cart</button>
+      </div>
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/n8.jpg" alt="Most wanted 4">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Sand Travel Shirt" data-price="480">Add to cart</button>
+      </div>
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/f1.jpg" alt="Most wanted 5">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Floral Summer Shirt" data-price="220">Add to cart</button>
+      </div>
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/f2.jpg" alt="Most wanted 6">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Summer Green" data-price="260">Add to cart</button>
+      </div>
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/f3.jpg" alt="Most wanted 7">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Party Floral Shirt" data-price="399">Add to cart</button>
+      </div>
+      <div class="most-wanted-box">
+        <div class="most-wanted-img">
+          <img src="img/products/f4.jpg" alt="Most wanted 8">
+          <p class="sale-badge">sale</p>
+          <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+        </div>
+        <button type="button" class="add-cart" data-name="Beach Floral Shirt" data-price="399">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Limited offer -->
+  <section class="limited-offer">
+    <div class="limited-offer-img">
+      <img src="img/others/offer.jpg?v=2" alt="Shopper choosing a new look">
+    </div>
+    <div class="limited-offer-text">
+      <h2>Flash sale</h2>
+      <h4>35% extra off this look for the first 30 shoppers</h4>
+      <a href="collections.html"><button>Shop Now <i class="fa-solid fa-arrow-right"></i></button></a>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="news">
+    <h2>Stay in the loop</h2>
+    <p>Get sale alerts, new arrivals, and member offers in your inbox</p>
+    <form id="newsForm" novalidate>
+      <div class="form-group">
+        <input type="email" id="newsEmail" placeholder="Enter your email">
+        <p class="error" id="newsEmailError"></p>
+      </div>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-box">
+        <a class="footer-logo" href="index.html">Walmart<span>.</span></a>
+        <p>Everyday fashion at fair prices. Made for real life, not just for photos.</p>
+        <h4>Follow us</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-box footer-visit">
+        <h4>Visit</h4>
+        <p>12, Anna Nagar, Chennai</p>
+        <p>Mon–Sat · 10am–8pm</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 Walmart.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
