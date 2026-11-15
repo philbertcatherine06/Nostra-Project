@@ -80,27 +80,43 @@ const cartTotal = document.getElementById("cartTotal");
 let cartList = [];
 let cartNoticeTimer = null;
 
-try {
-  cartList = JSON.parse(localStorage.getItem("walmartCartList")) || [];
-} catch (error) {
-  cartList = [];
+function loadCart() {
+  try {
+    cartList = JSON.parse(localStorage.getItem("walmartCartList")) || [];
+  } catch (error) {
+    cartList = [];
+  }
+
+  cartList = cartList
+    .filter((item) => item && item.name)
+    .map((item) => ({
+      name: item.name,
+      price: Number(item.price) || 0,
+      qty: Number(item.qty) || 1
+    }))
+    .filter((item) => item.price > 0);
 }
 
-cartList = cartList.filter((item) => item.price > 0 && item.name);
-
 function getCartCount() {
-  return cartList.reduce((count, item) => count + item.qty, 0);
+  return cartList.reduce((count, item) => count + (Number(item.qty) || 0), 0);
+}
+
+function updateCartCount() {
+  const count = getCartCount();
+
+  if (!cartCountBox) return;
+
+  cartCountBox.textContent = count;
+  cartCountBox.classList.toggle("show", count > 0);
 }
 
 function saveCart() {
   try {
     localStorage.setItem("walmartCartList", JSON.stringify(cartList));
-    localStorage.setItem("walmartCart", getCartCount());
+    localStorage.setItem("walmartCart", String(getCartCount()));
   } catch (error) {}
 
-  if (cartCountBox) {
-    cartCountBox.textContent = getCartCount();
-  }
+  updateCartCount();
 }
 
 function getItemFromButton(button) {
@@ -191,8 +207,10 @@ function addToCart(button) {
   }, 2500);
 }
 
+loadCart();
 saveCart();
 renderCartPanel();
+cartNotice?.classList.remove("show");
 
 document.addEventListener("click", (event) => {
   const addBtn = event.target.closest(".add-cart");
