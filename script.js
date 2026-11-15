@@ -306,9 +306,9 @@ function showProducts(list) {
     card.className = "product";
     card.innerHTML =
       `<img src="${item.image}" alt="${item.name}">` +
-      `<button type="button" class="add-cart" data-name="${item.name}" data-price="${item.price}">Add to cart</button>` +
       `<h3>${item.name}</h3>` +
-      `<p>₹${item.price}</p>`;
+      `<p>₹${item.price}</p>` +
+      `<button type="button" class="add-cart" data-name="${item.name}" data-price="${item.price}">Add to cart</button>`;
     productsBox.appendChild(card);
   });
 

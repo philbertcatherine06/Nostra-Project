@@ -1214,22 +1214,6 @@ img {
     font-size: 28px;
   }
 
-  .product img {
-    order: 1;
-  }
-
-  .product h3 {
-    order: 2;
-  }
-
-  .product p {
-    order: 3;
-  }
-
-  .product .add-cart {
-    order: 4;
-  }
-
   .filter-section {
     margin: 16px;
     display: flex;
@@ -1293,20 +1277,7 @@ img {
   }
 
   .product img {
-    order: 1;
     height: 180px;
-  }
-
-  .product h3 {
-    order: 2;
-  }
-
-  .product p {
-    order: 3;
-  }
-
-  .product .add-cart {
-    order: 4;
   }
 
   .contact-form {
