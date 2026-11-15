@@ -165,6 +165,7 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: auto;
 }
 
 .cart-box {
@@ -1128,6 +1129,11 @@ img {
     padding: 8px 36px 8px 12px;
   }
 
+  .navbar {
+    justify-content: space-between;
+    padding: 12px 16px;
+  }
+
   .navbar h1 {
     font-size: 28px;
   }
@@ -1180,6 +1186,10 @@ img {
   .contact-info,
   .contact-form {
     width: 100%;
+  }
+
+  .contact-page {
+    padding: 24px 16px 16px;
   }
 
   .contact-layout {
